@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        applicationId "com.mozi.component"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        versionCode 1
+        versionName "1.0"
+
+
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    annotationProcessor'com.alibaba:arouter-compiler:1.2.2'
+    implementation project(path: ':base')
+    if (isNeedIndexModule.toBoolean()) {
+        implementation project(path: ':index')
+    }
+    implementation project(path: ':mine')
+    implementation "org.java-websocket:Java-WebSocket:1.4.0"
+}

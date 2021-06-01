@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <Button android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:id="@+id/second"
+            android:text="second" />
+
+        <Button android:layout_width="0dp"
+        android:layout_weight="1"
+            android:layout_height="50dp"
+            android:id="@+id/setting"
+            android:text="setting"/>
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/main_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp" />
+
+
+    <RadioGroup
+        android:id="@+id/main_raido_group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f2f2f2"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+        <RadioButton
+            android:id="@+id/main_raido_btn_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="首页1"/>
+
+        <RadioButton
+            android:id="@+id/main_raido_btn_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="首页2"/>
+
+        <RadioButton
+            android:id="@+id/main_raido_btn_3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="首页3"/>
+
+        <RadioButton
+            android:id="@+id/main_raido_btn_4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:text="首页4"/>
+    </RadioGroup>
+
+
+
+
+
+
+
+</RelativeLayout>
